@@ -33,10 +33,10 @@ Route::post('/starship', [StarshipController::class, 'createStarship']);
 Route::put('/starship', [StarshipController::class, 'updateStarship']);
 Route::delete('/planet/{id}', [StarshipController::class, 'deleteStarship']);
 
-// ENDPOINTS PEOPLE PLANET
+// ENDPOINTS PEOPLE AND PLANET
 Route::get('/people-planet', [PeoplePlanetController::class, 'getPeoplesPlanets']);
 Route::post('/people-planet', [PeoplePlanetController::class, 'createPeoplePlanet']);
 
-// ENDPOINTS PEOPLE STARSHIP
+// ENDPOINTS PEOPLE AND STARSHIP
 Route::get('/people-starship', [PeopleStarshipController::class, 'getPeoplesStarships']);
 Route::post('/people-starship', [PeopleStarshipController::class, 'createPeopleStarships']);
