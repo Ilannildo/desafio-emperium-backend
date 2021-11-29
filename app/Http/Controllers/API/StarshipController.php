@@ -10,7 +10,7 @@ class StarshipController extends Controller
 {
     public function getStarships()
     {
-        $starships = Starship::with('peoples')->get();
+        $starships = Starship::all();
         return response()->json([
             'result' => $starships
         ]);
