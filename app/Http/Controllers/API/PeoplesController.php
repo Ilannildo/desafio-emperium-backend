@@ -11,8 +11,7 @@ class PeoplesController extends Controller
 {
     public function getPeoples()
     {
-       
-        $peoples = People::with('starships')->orderBy('created_at', 'desc')->get();
+        $peoples = People::with('starships')->get();
         return response()->json([
             'result' => $peoples
         ]);
@@ -20,9 +19,21 @@ class PeoplesController extends Controller
 
     public function peopleUnique($id)
     {
-        $people = People::find($id);
+        $people =  People::find($id);
+        $starships = $people->starships()->get();
+        $result = [
+            "name" => $people->name,
+            "height" => $people->height,
+            "mass" => $people->mass,
+            "hair_color" => $people->hair_color,
+            "birth_year" => $people->birth_year,
+            "gender" => $people->gender,
+            "url" => $people->url,
+            "starships" => $starships,
+        ];
+
         return response()->json([
-            'result' => $people
+            'result' => $result
         ]);
     }
 

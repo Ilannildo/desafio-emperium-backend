@@ -22,6 +22,8 @@ class CreateStarshipsTable extends Migration
             $table->string('max_atmosphering_speed')->nullable();
             $table->string('MGLT')->nullable();
             $table->string('url')->nullable();
+            $table->unsignedBigInteger('people_id')->nullable(true);
+            $table->foreign('people_id')->references('id')->on('peoples');
             $table->timestamps();
         });
     }

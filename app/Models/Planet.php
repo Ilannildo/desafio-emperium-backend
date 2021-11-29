@@ -19,7 +19,11 @@ class Planet extends Model
         "url",
     ];
 
-    public function peoples() {
-        return $this->hasMany(PeoplePlanet::class, 'planet_id', 'id');
+    // public function peoples() {
+    //     return $this->hasMany(PeoplePlanet::class, 'planet_id', 'id');
+    // }
+    public function peoples()
+    {
+        return $this->belongsToMany(People::class, 'peoples_planets', 'people_id', 'people_id');
     }
 }

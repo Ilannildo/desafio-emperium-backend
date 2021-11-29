@@ -17,10 +17,10 @@ class Starship extends Model
         "max_atmosphering_speed",
         "MGLT",
         "url",
+        "people_id",
     ];
-
-    public function peoples()
-    {
-        return $this->hasMany(PeopleStarship::class, 'starship_id', 'id');
+    
+    public function people() {
+        $this->belongsTo(People::class, 'starship_id', 'id');
     }
 }

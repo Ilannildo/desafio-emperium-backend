@@ -23,6 +23,7 @@ class StarshipSeeder extends Seeder
                 "max_atmosphering_speed" => "950",
                 "MGLT" => "60",
                 "url" => "https://swapi.dev/api/starships/2/",
+                "people_id" => 1
             ],
             [
                 "name" => "Star Destroyer",
@@ -32,6 +33,7 @@ class StarshipSeeder extends Seeder
                 "max_atmosphering_speed" => "975",
                 "MGLT" => "60",
                 "url" => "https://swapi.dev/api/starships/3/",
+                "people_id" => 3
             ],
             [
                 "name" => "Sentinel-class landing craft",
@@ -41,6 +43,7 @@ class StarshipSeeder extends Seeder
                 "max_atmosphering_speed" => "1000",
                 "MGLT" => "70",
                 "url" => "https://swapi.dev/api/starships/5/",
+                "people_id" => 2
             ],
             [
                 "name" => "Death Star",
@@ -50,6 +53,7 @@ class StarshipSeeder extends Seeder
                 "max_atmosphering_speed" => "n/a",
                 "MGLT" => "10",
                 "url" => "https://swapi.dev/api/starships/9/",
+                "people_id" => null
             ],
             [
                 "name" => "Millennium Falcon",
@@ -59,6 +63,7 @@ class StarshipSeeder extends Seeder
                 "MGLT" => "75",
                 "starship_class" => "Light freighter",
                 "url" => "https://swapi.dev/api/starships/10/",
+                "people_id" => null
             ],
             [
                 "name" => "Y-wing",
@@ -68,6 +73,7 @@ class StarshipSeeder extends Seeder
                 "MGLT" => "80",
                 "starship_class" => "assault starfighter",
                 "url" => "https://swapi.dev/api/starships/11/",
+                "people_id" => null
             ],
             [
                 "name" => "X-wing",
@@ -77,6 +83,7 @@ class StarshipSeeder extends Seeder
                 "MGLT" => "100",
                 "starship_class" => "Starfighter",
                 "url" => "https://swapi.dev/api/starships/12/",
+                "people_id" => null
             ],
             [
                 "name" => "TIE Advanced x1",
@@ -86,6 +93,7 @@ class StarshipSeeder extends Seeder
                 "MGLT" => "105",
                 "starship_class" => "Starfighter",
                 "url" => "https://swapi.dev/api/starships/13/",
+                "people_id" => null
             ],
             [
                 "name" => "Executor",
@@ -95,6 +103,7 @@ class StarshipSeeder extends Seeder
                 "MGLT" => "40",
                 "starship_class" => "Star dreadnought",
                 "url" => "https://swapi.dev/api/starships/15/",
+                "people_id" => null
             ],
             [
                 "name" => "Rebel transport",
@@ -104,6 +113,7 @@ class StarshipSeeder extends Seeder
                 "MGLT" => "20",
                 "starship_class" => "Medium transport",
                 "url" => "https://swapi.dev/api/starships/17/",
+                "people_id" => null
             ],
         ];
         foreach ($starships as $s) {

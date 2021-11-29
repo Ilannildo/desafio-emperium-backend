@@ -12,11 +12,11 @@ class PeoplePlanet extends Model
 
     public function peoples()
     {
-        return $this->hasMany(People::class, 'people_id', 'people_id');
+        return $this->belongsToMany(People::class, 'peoples_planets', 'people_id', 'people_id');
     }
 
     public function planets()
     {
-        return $this->hasMany(Planet::class, 'planet_id', 'planeta_id');
+        return $this->belongsToMany(Planet::class, 'peoples_planets','planet_id', 'planet_id');
     }
 }

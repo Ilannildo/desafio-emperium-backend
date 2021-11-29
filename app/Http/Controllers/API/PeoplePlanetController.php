@@ -23,10 +23,9 @@ class PeoplePlanetController extends Controller
 
     public function getPeoplesPlanets()
     {
-
-        $peoplesPlanets = PeoplePlanet::with('peoples')->with('planets')->get();
+        $peoples = PeoplePlanet::with('peoples')->with('planets')->get();
         return response()->json([
-            'result' => $peoplesPlanets
+            'result' => $peoples,
         ]);
     }
 }

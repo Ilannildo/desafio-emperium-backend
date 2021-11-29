@@ -26,6 +26,6 @@ class People extends Model
 
   public function starships()
   {
-    return $this->hasMany(PeopleStarship::class, 'people_id', 'id');
+    return $this->hasMany(Starship::class, 'people_id', 'id');
   }
 }
